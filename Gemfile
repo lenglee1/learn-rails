@@ -43,6 +43,7 @@ end
 group :production do
 gem 'pg'
 gem 'thin'
+gem 'rails_12factor'
 gem 'rails_on_heroku'
 end
 
