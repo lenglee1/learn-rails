@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -35,9 +35,16 @@ gem 'simple_form'
 gem 'high_voltage' 
 gem 'gibbon'
 group :development do
+gem 'sqlite3'	
 gem 'better_errors'
-gem 'quiet_assets' end
+gem 'quiet_assets' 
+end
 
+group :production do
+gem 'pg'
+gem 'thin'
+gem 'rails_on_heroku'
+end
 
 
 
